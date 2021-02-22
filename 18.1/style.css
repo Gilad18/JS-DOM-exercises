@@ -1,0 +1,12 @@
+section {
+    display: flex;
+    margin-top: 20px;
+}
+
+.smile {
+    width: 200px;
+    height: 200px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/360px-Smiley.svg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
