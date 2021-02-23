@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cardio</title>
+</head>
+<body>
+    <script>
+        let myDiv = document.createElement('div');
+        myDiv.classList.add('wrapper');
+        document.body.appendChild(myDiv);
+
+        let myList = document.createElement('ul');
+        for( let i=1; i<4; i++) {
+            let myLi = document.createElement('li');
+            myLi.innerHTML = i.toString();
+            myList.appendChild(myLi);
+        }
+        myDiv.appendChild(myList);
+
+        const ulElement = myDiv.querySelector('ul');
+
+        const myImg = document.createElement('img');
+        myImg.src = 'https://picsum.photos/500';
+        myImg.width = 250;
+        myImg.classList.add('cute');
+        myImg.alt = 'cute puppy!';
+        myDiv.appendChild(myImg);
+
+        const myHtmlString = '<div><p>Paragraph One</p><p>Parageph Two</p></div>' 
+        ulElement.insertAdjacentHTML('beforebegin',myHtmlString);
+
+        const secondP = myDiv.firstChild.lastChild
+        secondP.classList.add('warning');
+        secondP.previousSibling.remove();
+
+        const generatePlayerCard = (name , age, hight) => {
+            let newHtmlString = `<div class='playerCard'><h2>${name} - ${age}</h2>
+                <p> They are ${hight} and ${age} years old. In Dog yeras
+                    this person whould be ${age * 7}. That would be a tall dog! </p></div>`
+                    return newHtmlString;
+        }
+
+        const cards = document.createElement('div');
+        cards.classList.add('cards');
+        cards.innerHTML = generatePlayerCard('gilad', 33, 180) +  generatePlayerCard('yossi', 33, 180) +
+        generatePlayerCard('guy', 33, 180) +  generatePlayerCard('danni', 33, 180);
+        myDiv.insertAdjacentHTML('beforebegin', cards.innerHTML);
+
+    </script>
+</body>
+</html>
