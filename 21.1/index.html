@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21.1</title>
+</head>
+<body>
+    <label>Insert Your Age</label>
+    <input type="number">
+    <button>Check!</button>
+    <h3></h3>
+    <script>
+    const input = document.querySelector('input');
+    const btn = document.querySelector('button');
+    const result = document.querySelector('h3');
+
+    const check = () => {
+        if (input.value>=18) {
+            result.innerHTML = 'You can Drink'
+        } else result.innerHTML = 'You are too young!'
+    }
+
+    btn.addEventListener('click', check);
+</script>
+</body>
+</html>
