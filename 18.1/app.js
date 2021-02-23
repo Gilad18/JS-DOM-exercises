@@ -3,8 +3,18 @@ const submit = document.querySelector('.submit');
 const container = document.querySelector('.container');
 
 
+// const removeChildren = () => {
+//    let mydiv = document.querySelector('div');
+//   if(mySmiles.length>0) {
+     
+//       }
+// }
+
+
+
 
 const apply = () => {
+    // removeChildren();
     let num = myNum.value;
     if (isNaN(num)) {
         alert('not a number');
