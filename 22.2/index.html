@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Toggle the check box for the impage display</label>
+    <input type="checkbox" class="check" checked>
+    <br>
+    <script>
+        const checkbox = document.querySelector('input');
+        let myImg = document.createElement('img');
+        myImg.width = 250;
+        myImg.height = 250;
+        myImg.src = 'https://picsum.photos/200/300';
+        document.body.appendChild(myImg);
+    
+        checkbox.addEventListener('change', function() {
+        if (this.checked) {
+            myImg.style.visibility = 'visible';
+        } else {
+            myImg.style.visibility = 'hidden';
+        }
+        });
+    </script>
+</body>
+</html>
