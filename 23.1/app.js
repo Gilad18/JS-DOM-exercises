@@ -42,7 +42,7 @@ setInterval(() => {
     }
     theHours = theHours + 1;
     hour.innerHTML = theHours;
-    theHourDegree = theHourDegree + 15;
+    theHourDegree = theHourDegree + 30;
     pointhour.style.transform = `rotate(${theHourDegree}deg)`
 } , 3600000);
 
